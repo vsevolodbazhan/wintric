@@ -1,5 +1,5 @@
-![Project Logo](./docs/logo/light.png#gh-dark-mode-only)
-![Project Logo](./docs/logo/dark.png#gh-light-mode-only)
+![Project Logo](./docs/logo/light.svg#gh-dark-mode-only)
+![Project Logo](./docs/logo/dark.svg#gh-light-mode-only)
 
 Proof of concept project for modern open-source data stack.
 
