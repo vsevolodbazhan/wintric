@@ -18,7 +18,12 @@ The project is focused on data transformation and not data ingestion.
 
 The project is packaged using Docker.
 
-# Notes
+# Requirements
 
-- The project needs at least 4 GB of memory to run. Make sure to setup your Docker VM accordingly.
-- It may take several minutes for Airflow to start accepting requests.
+The project needs at least 8 GB of memory to run. Make sure to setup your Docker VM accordingly.
+
+Example using [`colima`](https://github.com/abiosoft/colima):
+
+```fish
+colima start --cpu 4 --memory 8 --disk 10
+```
