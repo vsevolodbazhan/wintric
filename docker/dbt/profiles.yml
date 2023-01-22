@@ -1,0 +1,12 @@
+general:
+  outputs:
+    dev:
+      type: trino
+      user: admin
+      database: iceberg
+      host: trino
+      port: 8080
+      schema: general
+      threads: 1
+
+  target: dev
