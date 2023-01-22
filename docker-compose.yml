@@ -62,6 +62,7 @@ services:
       - AWS_ACCESS_KEY_ID=admin
       - AWS_SECRET_ACCESS_KEY=password
       - AWS_REGION=us-east-1
+    # Create `warehouse` bucket.
     entrypoint: >
       /bin/sh -c " until (/usr/bin/mc config host add minio http://minio:9000 admin password) do echo 'Waiting...' && sleep 1; done; /usr/bin/mc rm -r --force minio/warehouse; /usr/bin/mc mb minio/warehouse; /usr/bin/mc policy set public minio/warehouse; exit 0; "
 
@@ -90,9 +91,6 @@ services:
     build: spark/
     depends_on:
       - iceberg-catalog
-    # volumes:
-    #   - ./warehouse:/home/iceberg/warehouse
-    #   - ./notebooks:/home/iceberg/notebooks/notebooks
     healthcheck:
       test: [ "CMD", "curl", "--fail", "http://localhost:8888/api" ]
       interval: 10s
