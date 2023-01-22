@@ -107,3 +107,9 @@ services:
     links:
       - iceberg-catalog:rest
       - minio:minio
+
+  trino:
+    image: trinodb/trino:405
+    container_name: trino
+    ports:
+      - 8082:8080
