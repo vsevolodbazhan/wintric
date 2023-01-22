@@ -17,3 +17,8 @@ The project is focused on data transformation and not data ingestion.
 - [Airflow](https://github.com/apache/airflow) provides scheduling for running dbt data models.
 
 The project is packaged using Docker.
+
+# Notes
+
+- The project needs at least 4 GB of memory to run. Make sure to setup your Docker VM accordingly.
+- It may take several minutes for Airflow to start accepting requests.
