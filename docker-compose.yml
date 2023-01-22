@@ -3,6 +3,7 @@ version: "3"
 services:
   airflow:
     image: apache/airflow:slim-2.5.1-python3.10
+    container_name: airflow
     command: standalone
     ports:
       - 8080:8080
