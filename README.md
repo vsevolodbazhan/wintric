@@ -20,10 +20,10 @@ The project is packaged using Docker.
 
 ## Requirements
 
-The project needs at least 8 GB of memory and a mounted `trino` directory with read-only access to run. Make sure to setup your Docker VM accordingly.
+The project needs at least 8 GB of memory and a mounted `docker` directory with read-only access to run. Make sure to setup your Docker VM accordingly.
 
 Example using [`colima`](https://github.com/abiosoft/colima) (executed from the project workspace):
 
 ```fish
-colima start --cpu 4 --memory 8 --disk 10 --mount (pwd)/trino:r
+colima start --cpu 4 --memory 8 --disk 10 --mount (pwd)/docker:r
 ```
