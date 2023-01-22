@@ -1,4 +1,4 @@
-general:
+demo:
   outputs:
     dev:
       type: trino
@@ -6,7 +6,7 @@ general:
       database: iceberg
       host: trino
       port: 8080
-      schema: general
+      schema: demo
       threads: 1
 
   target: dev
