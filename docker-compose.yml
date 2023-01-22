@@ -104,10 +104,19 @@ services:
       - AWS_REGION=us-east-1
     links:
       - iceberg-catalog:rest
-      - minio:minio
 
   trino:
     image: trinodb/trino:405
     container_name: trino
+    depends_on:
+      - iceberg-spark
     ports:
       - 8082:8080
+    volumes:
+      - ./trino/catalog:/etc/trino/catalog
+    environment:
+      - AWS_ACCESS_KEY_ID=admin
+      - AWS_SECRET_ACCESS_KEY=password
+      - AWS_REGION=us-east-1
+    links:
+      - iceberg-catalog:rest
