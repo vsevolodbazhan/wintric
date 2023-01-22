@@ -3,7 +3,7 @@
 
 Proof of concept project for modern open-source data stack.
 
-# Architecture
+## Architecture
 
 The project is focused on data transformation and not data ingestion.
 
@@ -18,12 +18,12 @@ The project is focused on data transformation and not data ingestion.
 
 The project is packaged using Docker.
 
-# Requirements
+## Requirements
 
-The project needs at least 8 GB of memory to run. Make sure to setup your Docker VM accordingly.
+The project needs at least 8 GB of memory and a mounted `trino` directory with read-only access to run. Make sure to setup your Docker VM accordingly.
 
-Example using [`colima`](https://github.com/abiosoft/colima):
+Example using [`colima`](https://github.com/abiosoft/colima) (executed from the project workspace):
 
 ```fish
-colima start --cpu 4 --memory 8 --disk 10
+colima start --cpu 4 --memory 8 --disk 10 --mount (pwd)/trino:r
 ```
