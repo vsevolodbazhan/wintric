@@ -7,7 +7,8 @@ Proof of concept project for modern open-source data stack.
 
 The project is focused on data transformation and not data ingestion.
 
-![Project Architecture](./docs/architecture.png)
+![Project Architecture](./docs/architecture/light.png#gh-dark-mode-only)
+![Project Architecture](./docs/architecture/dark.png#gh-light-mode-only)
 
 - [Minio](https://github.com/minio/minio) serves as a place to store data.
 - Data is stored using [Iceberg](https://github.com/apache/iceberg) format providing OLTP-style features for OLAP query engines.
